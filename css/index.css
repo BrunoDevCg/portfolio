@@ -200,12 +200,28 @@ span{
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--second-bg-color);
+    transition: .5s ease;
+}
+
+.services-container .services-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02) ;
 }
 
 .services-box i{
-    font-size: 10.5rem;
+    font-size: 8rem;
     color: var(--main-color);
 
+}
+
+.img-services img{
+    width: 5vw;
+    padding: 1rem;
+}
+
+.services-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
 }
 
 .text-services{
@@ -213,10 +229,7 @@ span{
 }
 
 
-.img-services img{
-    width: 4.5vw;
-    padding: 1rem;
-}
+
 
 
 .portifolio{
@@ -279,3 +292,84 @@ span{
 }
 
 
+
+
+/* Ajustes para telas menores */
+@media (max-width: 1200px) {
+    .home-img img,
+    .about-img img {
+        width: 45vw; /* Aumenta a largura das imagens em telas menores */
+    }
+
+    .nav-bar a {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte dos links */
+    }
+
+    .header {
+        padding: 2rem 5%; /* Diminui o padding do cabeçalho */
+    }
+
+    .services-box i {
+        font-size: 6rem; /* Reduz o tamanho dos ícones */
+    }
+}
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Muda a orientação para coluna */
+        text-align: center;
+    }
+
+    .home-img img,
+    .about-img img {
+        width: 70vw; /* Ajusta a largura das imagens em tablets */
+    }
+
+    .services-container {
+        flex-direction: column; /* Muda a orientação dos serviços para coluna */
+    }
+
+    .portifolio-img img {
+        width: 30vw; /* Ajusta a largura das imagens de portfólio em tablets */
+    }
+}
+
+/* Ajustes para mobile */
+@media (max-width: 480px) {
+    .header {
+        padding: 2rem 3%;
+        flex-direction: column; /* Coloca o menu abaixo do logo */
+    }
+
+    #menu-icon {
+        display: block; /* Exibe o ícone do menu em telas menores */
+    }
+
+    .nav-bar {
+        display: none; /* Esconde a barra de navegação */
+    }
+
+    .home-content h1 {
+        font-size: 3.6rem; /* Reduz o tamanho do título */
+    }
+
+    .home-content p {
+        font-size: 1.4rem; /* Ajusta o tamanho do texto */
+    }
+
+    .social-media a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem; /* Ajusta o tamanho dos ícones sociais */
+    }
+
+    .portifolio-img img {
+        width: 50vw; /* Ajusta a largura das imagens de portfólio em mobile */
+    }
+
+    .btn {
+        padding: 0.8rem 2rem; /* Ajusta o padding dos botões */
+        font-size: 1.4rem; /* Reduz o tamanho da fonte dos botões */
+    }
+}
