@@ -264,32 +264,15 @@ span{
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid var(--bg-color);
+    border: .2rem solid var(--second-bg-color);
+    transition: .5s ease;
 }
 
-
-.image-container {
-    position: relative;
-    width: fit-content;
-    display: inline-block;
+.portifolio-container .portifolio-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02) ;
 }
 
-
-.image-container .overlay-text {
-    position: absolute;
-    top: 0;  /* Posiciona o texto na parte superior */
-    left: 0;
-    width: 100%;    
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.4rem;
-    opacity: 0;    
-}
-
-.image-container:hover .overlay-text {
-    opacity: 1;
-}
 
 
 
