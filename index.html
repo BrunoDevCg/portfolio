@@ -3,145 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio Bruno</title>
+    <title data-key="title">Portifolio Bruno</title>
     <link rel="stylesheet" href="css/index.css">    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- section nav-bar design -->
     <header class="header">
-       <a href="#" class="logo">Bruno</a>
+        <a href="#" class="logo" data-key="logo">Bruno</a>        
 
-       <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-menu' id="menu-icon"></i>
 
-       <nav class="nav-bar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">Sobre Mim</a>
-        <a href="#services">Tecnologias</a>
-        <a href="#portifolio">Portifólio</a>
-        <a href="#">Contato</a>
-       </nav>
-       
+        <nav class="navbar">            
+            <a href="#home" class="active" data-key="home_link">Home</a>
+            <a href="#about" data-key="about_link">Sobre Mim</a>
+            <a href="#services" data-key="services_link">Tecnologias</a>
+            <a href="#portifolio" data-key="portifolio_link">Portifólio</a>
+            <a href="#contact" data-key="contact_link">Contato</a>
+            <div class="navbar-buttons">
+                <button id="language-toggle" data-lang="pt-br">EN</button>
+                <button id="theme-toggle">Modo Claro</button>
+            </div>
+        </nav>
     </header>
 
     <!--Section home page design -->
-    <!--  -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Olá, me chamo</h3>
-            <h1>Bruno Victor</h1>
-            <h3>E sou <span>Desenvolvedor de Software</span></h3>
-            <p>Desenvolvedor desktop, inciando carreira em desenvolvimento web,
-                <br> <span>Futuro Desenvolvedor Full Stack.</span>
+            <h3 data-key="home_greeting">Olá, me chamo</h3>
+            <h1 data-key="home_name">Bruno Victor</h1>
+            <h3 data-key="home_role">E sou <span data-key="home_role_span">Desenvolvedor de Software</span></h3>
+            <p data-key="home_description">Desenvolvedor desktop, inciando carreira em desenvolvimento web,
+                <br> <span data-key="home_future_role">Futuro Desenvolvedor Full Stack.</span>
             </p>
             <div class="social-media">     
                 <a href="https://wa.me/5567992890204" target="_blank" class='bx bxl-whatsapp'></a>           
                 <a href="https://instagram.com/ybrunodev" target="_blank" class='bx bxl-instagram'></a>
-                <a href="https://www.linkedin.com/in/bruno-victor-01a19b184/" target="_blank" class='bx bxl-linkedin-square' ></a>
+                <a href="https://www.linkedin.com/in/bruno-victor-01a19b184/" target="_blank" class='bx bxl-linkedin-square'></a>
             </div>
-            <a href="docs/Curriculo_Bruno.pdf" target="_blank" class="btn">Download CV</a>
+            <a href="docs/Curriculo_Bruno.pdf" target="_blank" class="btn" data-key="download_cv">Download CV</a>
         </div>
 
         <div class="home-img">
-            <img src="images/home.png" alt="">
+            <img src="images/home.png" alt="" data-key="home_image_alt">
         </div>
     </section>
     
-    <!-- about page disign -->
+    <!-- about page design -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="images/home1.png" alt="">
+            <img src="images/home1.png" alt="" data-key="about_image_alt">
         </div>
         <div class="about-content">
-            <h2 class="heading">Sobre <span>Mim</span></h2>
-            <h3>Desenvolvedor de Software</h3>
-            <p>Tenho 28 anos, sou casado, finalizando o curso de <span>Tecnologia em Análise e desenvolvimento de Sistemas</span>
+            <h2 class="heading" data-key="about_title">Sobre <span data-key="about_title_span">Mim</span></h2>
+            <h3 data-key="about_role">Desenvolvedor de Software</h3>
+            <p data-key="about_description">Tenho 28 anos, sou casado, finalizando o curso de <span data-key="about_course">Tecnologia em Análise e Desenvolvimento de Sistemas</span>
                 pela Universidade Católica Dom Bosco, apaixonado por games e tecnologia.
             </p>
-            <a href="#" class="btn"> Leia Mais</a>
+            <a href="#" class="btn" data-key="about_read_more">Leia Mais</a>
         </div>
     </section>
 
-
-    <!-- services section desing -->
-
+    <!-- services section design -->
     <section class="services" id="services">
-        <h2 class="heading"><span>Tecnologias</span></h2>
+        <h2 class="heading" data-key="services_title"><span data-key="services_title_span">Tecnologias</span></h2>
         <div class="services-container">
             <div class="services-box">
                 <i class='bx bx-code'></i>
-                <h3>Desenvolvimento Web</h3>
+                <h3 data-key="web_development_title">Desenvolvimento Web</h3>
                 <div class="text-services">                    
-                    <p>Tecnologias Web</p>
+                    <p data-key="web_technologies">Tecnologias Web</p>
                     <div class="img-services">
-                        <img src="images/html-5.png" alt="">
-                        <img src="images/css-3.png" alt="">
-                        <img src="images/javascript_919828.png" alt="">
-                        <img src="images/php.png" alt="">
-                        
-                        
-                        <!-- <i class='bx bxl-html5'></i>
-
-                        <i class='bx bxl-css3' ></i>
-                        <i class='bx bxl-javascript' ></i>
-                        <i class='bx bxl-php' ></i> -->
+                        <img src="images/html-5.png" alt="" data-key="html_image_alt">
+                        <img src="images/css-3.png" alt="" data-key="css_image_alt">
+                        <img src="images/javascript_919828.png" alt="" data-key="javascript_image_alt">
+                        <img src="images/php.png" alt="" data-key="php_image_alt">
                     </div>
                 </div>                
             </div>
             <div class="services-box">
                 <i class='bx bx-code'></i>
-                <h3>Desenvolvimento Web</h3>
+                <h3 data-key="desktop_development_title">Desenvolvimento Desktop</h3>
                 <div class="text-services">                    
-                    <p>Tecnologias Desktop</p>
+                    <p data-key="desktop_technologies">Tecnologias Desktop</p>
                     <div class="img-services">
-                        <img src="images/clarion.png" alt="Clarion">
-                        <img src="images/windev.png" alt="">
-                        <img src="images/windows form.png" alt="">
-                                                
+                        <img src="images/clarion.png" alt="Clarion" data-key="clarion_image_alt">
+                        <img src="images/windev.png" alt="" data-key="windev_image_alt">
+                        <img src="images/windows form.png" alt="" data-key="windows_form_image_alt">
                     </div>
                 </div>                
             </div>
             <div class="services-box">
                 <i class='bx bx-code'></i>
-                <h3>Análise de dados</h3>
+                <h3 data-key="data_analysis_title">Análise de Dados</h3>
                 <div class="text-services">                    
-                    <p>Tecnologias</p>
+                    <p data-key="data_technologies">Tecnologias</p>
                     <div class="img-services">
-                        <img src="images/powerbi.png" alt="Powerbi">
-                        <img src="images/excel.png" alt="">                                                                                               
+                        <img src="images/powerbi.png" alt="Powerbi" data-key="powerbi_image_alt">
+                        <img src="images/excel.png" alt="" data-key="excel_image_alt">                                                                                               
                     </div>
                 </div>                
             </div>
         </div>
     </section>
 
+    <!-- portfolio section -->
     <section class="portifolio" id="portifolio">
-        <h2 class="heading">Portifólio de <span>Projetos Web</span></h2>
+        <h2 class="heading" data-key="portfolio_title"><span data-key="portfolio_title_span">Projetos Web</span></h2>
         <div class="portifolio-container">
-            <div class="portifolio-box">
-                    <h3>Jogo da Memória</h3>
-                    <div class="portifolio-img">                
-                            <a href="https://brunodevcg.github.io/jogodamemoria/" target="_blank">
-                                <img src="images/jogo-da-memoria.png" alt="Jogo da Memória">
-                                
-                            </a>                
-                    </div>    
+            <div class="portifolio-box">                
+                <div class="portifolio-layer">
+                    <h2 data-key="memory_game_title"><span>Jogo da Memória</span></h2>
+                    <p data-key="memory_game_description">Feito em HTML, CSS e JavaScript</p>
+                </div>
+                <a href="https://brunodevcg.github.io/jogodamemoria/" target="_blank">
+                    <img src="images/jogo-da-memoria.png" alt="Jogo da Memória" data-key="memory_game_image_alt">
+                </a>
             </div>
-            <div class="portifolio-box">
-                <div class="portifolio-img">
-                    <h3>Flappy Bird Versao - PC</h3>
-                    <a href="https://brunodevcg.github.io/flappybird/flappy.html" target="_blank">
-                        <img src="images/flappy-bird.png" alt="Flappy Bird">
-                        
-                    </a>
-                </div>        
-            </div>            
-                          
-               
+            <div class="portifolio-box">                
+                <div class="portifolio-layer">
+                    <h2 data-key="flappy_bird_title"><span>Flappy Bird PC</span></h2>
+                    <p data-key="flappy_bird_description">Feito em HTML, CSS e JavaScript</p>
+                </div>
+                <a href="https://brunodevcg.github.io/flappybird/flappy.html" target="_blank">
+                    <img src="images/flappy-bird.png" alt="Flappy Bird" data-key="flappy_bird_image_alt">
+                </a>                
+            </div>
         </div>
     </section>
+
+    <!-- contact section -->
+    <section class="contact" id="contact">
+        <h2 class="heading" data-key="contact_title"><span data-key="contact_title_span">Meu</span> Contato!</h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" id="contact-name" placeholder="Nome Completo" data-key="contact_name_placeholder">
+                <input type="text" id="contact-email" placeholder="Email" data-key="contact_email_placeholder">
+            </div>
+            <div class="input-box">
+                <input type="text" id="contact-phone" placeholder="Telefone" oninput="mascaraTelef(event)" data-key="contact_phone_placeholder">
+                <input type="text" id="contact-subject" placeholder="Assunto do Email" data-key="contact_subject_placeholder">
+            </div>
+            <textarea id="contact-message" name="" cols="30" rows="10" placeholder="Sua mensagem" data-key="contact_message_placeholder"></textarea>
+            <input type="submit" value="Send Message" class="btn" data-key="contact_submit">
+        </form>
+        
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p data-key="footer_text">Copyright &copy; 2024 por Bruno Victor | Todos os direitos reservados.</p>
+        </div>
+    
+        <div class="footer-iconTop">
+            <a href="#top" id="scrollToTopBtn">
+                <i class='bx bx-up-arrow-alt'></i>
+            </a>
+        </div>
+    </footer>
 
     <script src="js/index.js"></script>
 </body>
-
 </html>

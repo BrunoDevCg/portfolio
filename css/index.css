@@ -11,10 +11,22 @@
     font-family: 'Poppins',sans-serif;
 }
 
+#html{
+    color: red;    
+}
+#css{
+    color: blue;
+
+}
+#javascript{
+    color: yellow;
+}
+
+
 :root{
     --bg-color: #1f242d;
     --second-bg-color: #292d35;
-    --text-color: #fff;
+    --text-color: #aaaaaa;
     --main-color: rgb(0, 110, 255);
 }
 
@@ -47,6 +59,17 @@ section{
     z-index: 100;
 }
 
+.header .sticky{
+    border-bottom: .1rem  solid rgba(0, 0, 0, .2);
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
 .logo{
     font-size: 2.5rem;
     color: var(--text-color);
@@ -54,15 +77,21 @@ section{
     cursor: default;
 }
 
-.nav-bar a{
+.navbar a{
     font-size: 1.7rem;
     color: var(--text-color);
     margin-left: 4rem;
 
 }
-.nav-bar a:hover,
-.nav-bar a.active{
+.navbar a:hover,
+.navbar a.active{
     color: var(--main-color);
+}
+
+.navbar-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem; /* Espaço entre os botões */
 }
 
 #menu-icon{
@@ -161,9 +190,10 @@ span{
 .about-img img{
     width: 35vw;
 }
+
 .heading{
     text-align: center;
-    font-size: 4,5rem;
+    font-size: 2.8rem;
 }
 .about-content h2{
     text-align: left;
@@ -230,129 +260,348 @@ span{
 
 
 
+.portifolio {
+    background: var(--second-bg-color);
+    padding: 2rem 9%;
+}
+
+.portifolio h2 {
+    margin-bottom: 5rem;    
+    text-align: center; /* Centraliza o título */
+}
+
+.portifolio h3 {
+    margin-bottom: 5rem;
+    text-align: center; /* Centraliza o título */
+}
+
+.portifolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portifolio-container .portifolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    justify-content: center;
+    align-items: center;        
+}
+
+.portifolio-container .portifolio-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.portifolio-box img {
+    width: 15vw; /* Ajusta a imagem para preencher o contêiner */    
+    transition: .3s ease;
+}
 
 
-.portifolio{
+
+.portifolio-box:hover .portifolio-layer {
+    transform: translateY(0); /* Exibe o texto ao passar o mouse */
+}
+
+.portifolio-layer h4 {
+    font-size: 3rem;
+    margin-bottom: 1rem; /* Adiciona espaço abaixo do título */
+}
+
+.portifolio-layer p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem; /* Adiciona espaço abaixo da descrição */
+}
+
+.portifolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portifolio-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
     background: var(--second-bg-color);
 }
 
-.portifolio-img img{
-    width: 12vw;
-    padding: 2.5rem;
+.footer-text p {
+    font-size: 1.6rem;    
 }
 
-.portifolio h2{
-    margin-bottom: 5rem;    
-}
-
-.portifolio h3{
-    margin-bottom: 5rem;
-
-}
-
-.portifolio-container{
-    display: flex;
+.footer-iconTop a {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.portifolio-container .portifolio-box{
-    flex: 1 1 30rem;
-    background: var(--bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem solid var(--second-bg-color);
+    padding: .8rem;    
+    background: var(--main-color);
+    border-radius: .8rem;
     transition: .5s ease;
 }
 
-.portifolio-container .portifolio-box:hover{
-    border-color: var(--main-color);
-    transform: scale(1.02) ;
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+
+.language-switcher {
+    position: relative;
+}
+
+#language-toggle {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: background 0.3s;
+}
+
+#language-toggle:hover,
+#theme-toggle:hover {
+    background: darken(var(--main-color), 10%);
+}
+
+
+.theme-switcher {
+    position: relative;
+}
+
+#theme-toggle {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: background 0.3s;
+}
+
+#theme-toggle:hover {
+    background: darken(var(--main-color), 10%);
 }
 
 
 
 
+/* Tema Claro */
+:root {
+    --bg-color: #fff;
+    --second-bg-color: #f4f4f4;
+    --text-color: #333;
+    --main-color: rgb(0, 110, 255);
+}
 
-/* Ajustes para telas menores */
-@media (max-width: 1200px) {
-    .home-img img,
-    .about-img img {
-        width: 45vw; /* Aumenta a largura das imagens em telas menores */
-    }
+[data-theme='dark'] {
+    --bg-color: #1f242d;
+    --second-bg-color: #292d35;
+    --text-color: #fff;
+    --main-color: rgb(0, 110, 255);
+}
 
-    .nav-bar a {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte dos links */
-    }
+body[data-theme='dark'] {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
 
-    .header {
-        padding: 2rem 5%; /* Diminui o padding do cabeçalho */
-    }
+.header[data-theme='dark'] {
+    background: var(--bg-color);
+}
 
-    .services-box i {
-        font-size: 6rem; /* Reduz o tamanho dos ícones */
+.navbar a[data-theme='dark'] {
+    color: var(--text-color);
+}
+
+.btn[data-theme='dark'] {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+}
+
+/* Adapte o restante do CSS para refletir a mudança de tema */
+
+
+
+
+
+
+/* breakpoints */
+
+@media(max-width: 1200px){
+    html{
+        font-size: 55%;
     }
 }
 
-/* Ajustes para tablets */
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column; /* Muda a orientação para coluna */
-        text-align: center;
-    }
-
-    .home-img img,
-    .about-img img {
-        width: 70vw; /* Ajusta a largura das imagens em tablets */
-    }
-
-    .services-container {
-        flex-direction: column; /* Muda a orientação dos serviços para coluna */
-    }
-
-    .portifolio-img img {
-        width: 30vw; /* Ajusta a largura das imagens de portfólio em tablets */
-    }
-}
-
-/* Ajustes para mobile */
-@media (max-width: 480px) {
-    .header {
+@media(max-width: 991px){
+    .header{
         padding: 2rem 3%;
-        flex-direction: column; /* Coloca o menu abaixo do logo */
     }
 
-    #menu-icon {
-        display: block; /* Exibe o ícone do menu em telas menores */
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .portifolio{
+        padding-bottom: 7rem;
     }
 
-    .nav-bar {
-        display: none; /* Esconde a barra de navegação */
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);;
+        display: none;        
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .home-content h1 {
-        font-size: 3.6rem; /* Reduz o tamanho do título */
+    .navbar-buttons {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .home-content p {
-        font-size: 1.4rem; /* Ajusta o tamanho do texto */
+    .navbar.active{
+        display: block;
     }
 
-    .social-media a {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.5rem; /* Ajusta o tamanho dos ícones sociais */
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 2.6rem
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+
+    }
+    .about img{
+        width: 70vw;
+        font-size: 4rem;
     }
 
-    .portifolio-img img {
-        width: 50vw; /* Ajusta a largura das imagens de portfólio em mobile */
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .img-services img{
+        width: 15vw;
+        font-size: 4rem;
     }
 
-    .btn {
-        padding: 0.8rem 2rem; /* Ajusta o padding dos botões */
-        font-size: 1.4rem; /* Reduz o tamanho da fonte dos botões */
+    .portifolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .portifolio-container{
+        flex-direction: column;        
+    }
+
+    .portifolio img{
+        width: 35vw;
+    }
+}
+
+@media(max-width: 617px){
+    .portifolio-container{
+        flex-direction: column;
+    }
+    .portifolio img{
+        width: 35vw;
     }
 }
