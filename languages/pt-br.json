@@ -27,7 +27,7 @@
   "memory_game_description": "Feito em HTML, CSS e JavaScript",
   "flappy_bird_title": "Flappy Bird PC",
   "flappy_bird_description": "Feito em HTML, CSS e JavaScript",
-  "contact_title": "Meu Contato!",
+  "contact_title": "<span>Contato</span>",
   "contact_name_placeholder": "Nome Completo",
   "contact_email_placeholder": "Email",
   "contact_phone_placeholder": "Telefone",
