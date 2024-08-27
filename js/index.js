@@ -1,17 +1,17 @@
-import nodemailer from 'nodemailer'
-require('dotenv').config();
+// import nodemailer from 'nodemailer'
+// require('dotenv').config();
 
 
-export async function getMailClient(){
+// export async function getMailClient(){
 
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER,  // Usando variáveis de ambiente
-            pass: process.env.EMAIL_PASS   // Usando variáveis de ambiente
-        }
-    })
-}
+//     const transporter = nodemailer.createTransport({
+//         service: 'gmail',
+//         auth: {
+//             user: process.env.EMAIL_USER,  // Usando variáveis de ambiente
+//             pass: process.env.EMAIL_PASS   // Usando variáveis de ambiente
+//         }
+//     })
+// }
 
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
