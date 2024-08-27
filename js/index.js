@@ -1,3 +1,18 @@
+import nodemailer from 'nodemailer'
+require('dotenv').config();
+
+
+export async function getMailClient(){
+
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL_USER,  // Usando variáveis de ambiente
+            pass: process.env.EMAIL_PASS   // Usando variáveis de ambiente
+        }
+    })
+}
+
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -34,6 +49,8 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
+
+//marcara campo telefone
 function mascaraTelef(event) {
     let input = event.target;
     let value = input.value.replace(/\D/g, '');
@@ -124,6 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loadLanguage(currentLang);
 });
 
+
+//tema claro/escuro
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
