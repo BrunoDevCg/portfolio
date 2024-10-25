@@ -8,7 +8,7 @@
   "contact_link": "Contact",
   "home_greeting": "Hello, my name is",
   "home_name": "Bruno Victor",
-  "home_role": "And I am a <span>Software Developer</span>",
+  "home_role": "And I am a <span id=\"typing-text\">Software Developer</span>",
   "home_description": "Desktop developer, starting a career in web development,<br> <span>Future Full Stack Developer.</span>",
   "download_cv": "Download CV",
   "about_title": "About <span>Me</span>",

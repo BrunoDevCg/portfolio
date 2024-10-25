@@ -1,3 +1,4 @@
+// Seleção e manipulação do menu e da barra de navegação
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -6,7 +7,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-// scroll sections active link
+// Links ativos de acordo com a seção visível na rolagem
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -25,108 +26,99 @@ window.onscroll = () => {
         }
     });
 
-    // navbar stick
+    // Tornando o header fixo ao rolar
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
 
+    // Removendo classes de menu e navbar ao rolar
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
 
 
-//marcara campo telefone
+
+
+const typingElement = document.getElementById('typing-text');
+
+// Função para carregar o JSON
+const loadJSON = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error('Erro ao carregar o arquivo JSON.');
+    }
+    return await response.json();
+};
+
+// Função para o efeito de digitação
+const typeWriter = (text, delay) => {
+    typingElement.innerHTML = ''; // Limpa o texto anterior
+    let i = 0;
+
+    const typingInterval = setInterval(() => {
+        if (i < text.length) {
+            typingElement.innerHTML += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(typingInterval);
+            // Espera 1 segundo antes de iniciar a próxima digitação
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % roles.length; // Alterna entre os índices
+                typeWriter(roles[currentIndex], 100); // Inicia a digitação da próxima frase
+            }, 1000); // Tempo de espera antes de começar a próxima digitação
+        }
+    }, delay);
+};
+
+// Variáveis de controle
+let roles = [];
+let currentIndex = 0;
+
+// Carrega o JSON e inicia o efeito de digitação
+loadJSON('../languages/pt-br.json')
+    .then(data => {
+        roles = [data.home_role, data.home_hole]; // Armazena as frases no array
+        typeWriter(roles[currentIndex], 100); // Inicia a digitação
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        typingElement.innerHTML = 'Erro ao carregar as mensagens.';
+    });
+
+
+
+
+
+
+// Função de máscara para campo de telefone
 function mascaraTelef(event) {
     let input = event.target;
     let value = input.value.replace(/\D/g, '');
 
-    if (value.length > 11) {
-        value = value.slice(0, 11);
-    }
+    if (value.length > 11) value = value.slice(0, 11);
 
-    if (value.length > 10) {
-        value = value.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, '($1) $2 $3-$4');
-    } else if (value.length > 5) {
-        value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
-    } else if (value.length > 2) {
-        value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
-    } else {
-        value = value.replace(/(\d{0,2})/, '($1');
-    }
+    if (value.length > 10) value = value.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, '($1) $2 $3-$4');
+    else if (value.length > 5) value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+    else if (value.length > 2) value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+    else value = value.replace(/(\d{0,2})/, '($1');
 
     input.value = value;
 
-    // Remove parênteses, espaço e hífen ao apagar os números
-    if (input.value === '(' || input.value === '() ' || input.value === '()') {
-        input.value = '';
-    }
+    if (input.value === '(' || input.value === '() ' || input.value === '()') input.value = '';
 }
 
+// Função para botão de rolagem para o topo
 document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona o botão de rolar para o topo
     const scrollToTopBtn = document.querySelector('#scrollToTopBtn');
 
-    // Verifica se o botão foi encontrado
     if (scrollToTopBtn) {
         scrollToTopBtn.addEventListener('click', (event) => {
-            event.preventDefault(); // Previne o comportamento padrão do link
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Adiciona o efeito de rolagem suave
-            });
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-
-    // Função para carregar o JSON de idioma
-    async function loadTranslations(language) {
-        const response = await fetch(`languages/${language}.json`);
-        const translations = await response.json();
-        return translations;
-    }
-
-    const languageToggle = document.getElementById('language-toggle');
-    const elementsToTranslate = document.querySelectorAll('[data-key]');
-    let currentLang = 'pt-br'; // idioma padrão
-
-    const loadLanguage = async (lang) => {
-        try {
-            const translations = await loadTranslations(lang);
-
-            // Atualiza o conteúdo das tags com data-key
-            elementsToTranslate.forEach(element => {
-                const key = element.getAttribute('data-key');
-                if (translations[key]) {
-                    element.innerHTML = translations[key];
-                }
-            });
-
-            // Atualiza os placeholders dos campos de formulário
-            document.querySelectorAll('[data-key]').forEach(element => {
-                const key = element.getAttribute('data-key');
-                if (translations[key] && (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA')) {
-                    element.setAttribute('placeholder', translations[key]);
-                }
-            });
-
-            // Atualiza o atributo data-lang do botão para refletir o idioma atual
-            languageToggle.setAttribute('data-lang', lang);
-            languageToggle.textContent = lang === 'pt-br' ? 'EN' : 'PT-BR';
-
-        } catch (error) {
-            console.error('Erro ao carregar o idioma:', error);
-        }
-    };
-
-    languageToggle.addEventListener('click', () => {
-        currentLang = currentLang === 'pt-br' ? 'en' : 'pt-br';
-        loadLanguage(currentLang);
-    });
-
-    // Carrega o idioma padrão ao inicializar
-    loadLanguage(currentLang);
 });
 
-
-//tema claro/escuro
+// Alternância de tema claro/escuro
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
@@ -153,17 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
+// Configuração de animações ScrollReveal
 ScrollReveal({ 
     reset: true,
     distance: '80px',
     duration: 2000,
     delay: 200
-
-
 });
 
-
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-

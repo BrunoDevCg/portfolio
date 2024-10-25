@@ -11,6 +11,8 @@
     font-family: 'Poppins',sans-serif;
 }
 
+
+
 #html{
     color: red;    
 }
@@ -483,11 +485,21 @@ body[data-theme='dark'] {
     color: var(--second-bg-color);
 }
 
-/* Adapte o restante do CSS para refletir a mudança de tema */
 
+#typing-text {
+    border-right: 2px solid black;
+    padding-right: 5px;
+    animation: blink-cursor 0.7s steps(30) infinite normal;
+}
 
-
-
+@keyframes blink-cursor {
+    from {
+        border-color: black;
+    }
+    to {
+        border-color: transparent;
+    }
+}
 
 
 /* breakpoints */
@@ -605,3 +617,4 @@ body[data-theme='dark'] {
         width: 35vw;
     }
 }
+
