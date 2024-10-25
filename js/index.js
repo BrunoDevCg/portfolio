@@ -74,7 +74,7 @@ let roles = [];
 let currentIndex = 0;
 
 // Carrega o JSON e inicia o efeito de digitação
-loadJSON('../languages/pt-br.json')
+loadJSON('https://raw.githubusercontent.com/BrunoDevCg/portfolio/main/languages/pt-br.json')
     .then(data => {
         roles = [data.home_role, data.home_hole]; // Armazena as frases no array
         typeWriter(roles[currentIndex], 100); // Inicia a digitação
