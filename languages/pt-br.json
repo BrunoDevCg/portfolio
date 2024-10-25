@@ -27,6 +27,7 @@
   "memory_game_description": "Feito em HTML, CSS e JavaScript",
   "flappy_bird_title": "Flappy Bird PC",
   "flappy_bird_description": "Feito em HTML, CSS e JavaScript",
+  "extratir_texto_title":"Extrair Texto de imagem com Python",
   "contact_title": "<span>Contato</span>",
   "contact_name_placeholder": "Nome Completo",
   "contact_email_placeholder": "Email",
@@ -34,6 +35,7 @@
   "contact_subject_placeholder": "Assunto do Email",
   "contact_message_placeholder": "Sua mensagem",
   "contact_submit": "Enviar Mensagem",
-  "footer_text": "Copyright &copy; 2024 por Bruno Victor | Todos os direitos reservados."
-  
+  "footer_text": "Copyright &copy; 2024 por Bruno Victor | Todos os direitos reservados.",
+  "portfolio_title_projetos": "Portfólio Bruno Victor",
+  "source_code": "Código Fonte"
 }
