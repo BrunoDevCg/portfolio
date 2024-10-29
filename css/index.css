@@ -105,18 +105,18 @@ section{
 
 }
 
-
 .home{
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-
+section.home {    
+    justify-content: space-between; 
+}
 
 .home-img img{
-    width: 35vw;
-    
+    width: 35vw;    
 }
 
 .home-content h3{
@@ -301,7 +301,7 @@ section{
 }
 
 .portifolio-box img {
-    width: 15vw; /* Ajusta a imagem para preencher o contêiner */    
+    width: 10vw; /* Ajusta a imagem para preencher o contêiner */    
     transition: .3s ease;
 }
 
@@ -490,6 +490,13 @@ body[data-theme='dark'] {
     border-right: 2px solid black;
     padding-right: 5px;
     animation: blink-cursor 0.7s steps(30) infinite normal;
+}
+
+#typing-text {
+    border-right: 2px solid;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @keyframes blink-cursor {

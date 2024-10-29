@@ -36,75 +36,57 @@ window.onscroll = () => {
 };
 
 
+// efeito digitação
+
+const phrases = [
+    "Analista de Sistemas",
+    "Desenvolvedor de Software",
+    "Analista de Dados Jr"
+];
 
 
-const typingElement = document.getElementById('typing-text');
+const typingText = document.getElementById("typing-text");
+let phraseIndex = 0; // Certifique-se de que está escrito como "phraseIndex"
+let charIndex = 0;
+let isDeleting = false;
+const typingSpeed = 100; // Velocidade de digitação
+const deletingSpeed = 35; // Velocidade de apagar
+const pauseBetweenPhrases = 2000; // Pausa entre frases
 
-// Função para carregar o JSON
-const loadJSON = async (url) => {
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error('Erro ao carregar o arquivo JSON.');
-    }
-    return await response.json();
-};
+function type() {
+    const currentPhrase = phrases[phraseIndex]; // Certifique-se de que está escrito como "phraseIndex"
 
-// Função para o efeito de digitação
-const typeWriter = (text, delay) => {
-    typingElement.innerHTML = ''; // Limpa o texto anterior
-    let i = 0;
+    if (isDeleting) {
+        // Apaga o texto
+        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
 
-    const typingInterval = setInterval(() => {
-        if (i < text.length) {
-            typingElement.innerHTML += text.charAt(i);
-            i++;
+        // Quando terminar de apagar, muda para a próxima frase
+        if (charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length; // Certifique-se de que está escrito como "phraseIndex"
+            setTimeout(type, typingSpeed);
         } else {
-            clearInterval(typingInterval);
-            // Espera 1 segundo antes de iniciar a próxima digitação
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % roles.length; // Alterna entre os índices
-                typeWriter(roles[currentIndex], 100); // Inicia a digitação da próxima frase
-            }, 1000); // Tempo de espera antes de começar a próxima digitação
+            setTimeout(type, deletingSpeed);
         }
-    }, delay);
-};
+    } else {
+        // Digita o texto
+        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
 
-// Variáveis de controle
-let roles = [];
-let currentIndex = 0;
-
-// Carrega o JSON e inicia o efeito de digitação
-loadJSON('https://raw.githubusercontent.com/BrunoDevCg/portfolio/main/languages/pt-br.json')
-    .then(data => {
-        roles = [data.home_role, data.home_hole]; // Armazena as frases no array
-        typeWriter(roles[currentIndex], 100); // Inicia a digitação
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        typingElement.innerHTML = 'Erro ao carregar as mensagens.';
-    });
-
-
-
-
-
-
-// Função de máscara para campo de telefone
-function mascaraTelef(event) {
-    let input = event.target;
-    let value = input.value.replace(/\D/g, '');
-
-    if (value.length > 11) value = value.slice(0, 11);
-
-    if (value.length > 10) value = value.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, '($1) $2 $3-$4');
-    else if (value.length > 5) value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
-    else if (value.length > 2) value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
-    else value = value.replace(/(\d{0,2})/, '($1');
-
-    input.value = value;
-
-    if (input.value === '(' || input.value === '() ' || input.value === '()') input.value = '';
+        // Quando terminar de digitar, espera e depois começa a apagar
+        if (charIndex === currentPhrase.length) {
+            isDeleting = true;
+            setTimeout(type, pauseBetweenPhrases);
+        } else {
+            setTimeout(type, typingSpeed);
+        }
+    }
 }
+
+document.addEventListener("DOMContentLoaded", () => type());
+
+
 
 // Função para botão de rolagem para o topo
 document.addEventListener('DOMContentLoaded', () => {
