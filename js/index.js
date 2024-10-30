@@ -40,7 +40,7 @@ window.onscroll = () => {
 
 // efeito digitação
 const phrases = [    
-    "Desenvolvedor Full Stack"
+    "Desenvolvedor Full Stack"    
 ];
 
 const typingText = document.getElementById("typing-text");
@@ -81,7 +81,6 @@ function type() {
         }
     }
 }
-
 document.addEventListener("DOMContentLoaded", () => type());
 //
 
