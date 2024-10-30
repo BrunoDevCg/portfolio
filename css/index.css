@@ -335,6 +335,7 @@ section.home {
     transition: .5s ease;
 }
 
+
 .services-container .services-box:hover{
     border-color: var(--main-color);
     transform: scale(1.02) ;
@@ -387,6 +388,7 @@ section.home {
 .portfolio-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
+    padding: 3rem 2rem 4rem;
     box-shadow: 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
@@ -395,8 +397,12 @@ section.home {
     align-items: center;        
 }
 
+
+
 .portfolio-container .portfolio-box:hover {
     border-color: var(--main-color);
+    background: var(--bg-color);
+    border: .2rem solid var(--second-bg-color);    
     transform: scale(1.02);
 }
 
@@ -405,6 +411,13 @@ section.home {
     transition: .3s ease;
 }
 
+.portfolio-box .btn{
+    margin: 2rem;
+}
+
+.btn-container{
+    display: flex;
+}
 
 
 .portfolio-box:hover .portfolio-layer {
@@ -675,6 +688,9 @@ body[data-theme='dark'] {
     }
     .home{
         flex-direction: column;
+    }
+    .home-conten{
+    margin: 2rem;
     }
     .home-content h3{
         font-size: 2.6rem
