@@ -35,7 +35,36 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
+const toggleSwitch = document.getElementById('toggleSwitch');
+const body = document.body;
 
+toggleSwitch.addEventListener('click', function() {
+  if (toggleSwitch.classList.contains('day')) {
+    toggleSwitch.classList.remove('day');
+    toggleSwitch.classList.add('night');
+
+    // Definindo as cores do tema escuro
+    body.style.setProperty('--bg-color', '#1f242d');
+    body.style.setProperty('--second-bg-color', '#292d35');
+    body.style.setProperty('--text-color', '#fff');
+    body.style.setProperty('--main-color', 'rgb(0, 110, 255)');
+    
+    // Aplicando o fundo diretamente
+    body.style.backgroundColor = 'var(--bg-color)';
+  } else {
+    toggleSwitch.classList.remove('night');
+    toggleSwitch.classList.add('day');
+
+    // Definindo as cores do tema claro
+    body.style.setProperty('--bg-color', '#fff');
+    body.style.setProperty('--second-bg-color', '#f4f4f4');
+    body.style.setProperty('--text-color', '#333');
+    body.style.setProperty('--main-color', 'rgb(0, 110, 255)');
+
+    // Aplicando o fundo diretamente
+    body.style.backgroundColor = 'var(--bg-color)';
+  }
+});
 
 
 // efeito digitação
@@ -81,6 +110,7 @@ function type() {
         }
     }
 }
+
 document.addEventListener("DOMContentLoaded", () => type());
 //
 
@@ -101,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Alternância de tema claro/escuro
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleBtn = document.getElementById('toggle-switch');
     const currentTheme = localStorage.getItem('theme') || 'light';
 
     if (currentTheme === 'dark') {

@@ -40,8 +40,109 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
-
+    transition: background-color 1s ease;
 }
+
+
+.toggle-switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: #87CEEB;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 1s ease;
+    margin: 0 auto;
+    
+  }
+
+  .toggle-switch .switch {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: left 1s cubic-bezier(0.68, -0.55, 0.17, 1.55);
+  }
+
+  .toggle-switch.day .switch {
+    left: 10px;
+  }
+
+  .toggle-switch.night .switch {
+    left: 110px;
+    background-color: black;
+  }
+
+  .toggle-switch.day {
+    background-color: #87CEEB; 
+  }
+
+  .toggle-switch.night {
+    background-color: #2C3E50; 
+  }
+
+  .sun {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: yellow;
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  .cloud {
+    position: absolute;
+    top: 50%;
+    left: 55px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  .moon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: lightgray;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .stars {
+    position: absolute;
+    top: 50%;
+    right: 55px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .toggle-switch.night .sun,
+  .toggle-switch.night .cloud {
+    opacity: 0;
+  }
+
+  .toggle-switch.night .moon,
+  .toggle-switch.night .stars {
+    opacity: 1;
+  }
+
+
+
 
 section{
     min-height: 100vh;
@@ -623,4 +724,3 @@ body[data-theme='dark'] {
         width: 35vw;
     }
 }
-
