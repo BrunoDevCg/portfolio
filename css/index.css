@@ -225,7 +225,7 @@ section.home {
 }
 
 .services-container .services-box{
-    flex: 1 1 40rem;
+    flex: 1 45rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
@@ -261,29 +261,29 @@ section.home {
 
 
 
-.portifolio {
+.portfolio {
     background: var(--second-bg-color);
-    padding: 2rem 9%;
+    padding: 10rem 9%;
 }
 
-.portifolio h2 {
+.portfolio h2 {
     margin-bottom: 5rem;    
     text-align: center; /* Centraliza o título */
 }
 
-.portifolio h3 {
+.portfolio h3 {
     margin-bottom: 5rem;
     text-align: center; /* Centraliza o título */
 }
 
-.portifolio-container {
+.portfolio-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
     align-items: center;
     gap: 2.5rem;
 }
 
-.portifolio-container .portifolio-box {
+.portfolio-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
     box-shadow: 1rem var(--bg-color);
@@ -294,33 +294,33 @@ section.home {
     align-items: center;        
 }
 
-.portifolio-container .portifolio-box:hover {
+.portfolio-container .portfolio-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
 }
 
-.portifolio-box img {
+.portfolio-box img {
     width: 10vw; /* Ajusta a imagem para preencher o contêiner */    
     transition: .3s ease;
 }
 
 
 
-.portifolio-box:hover .portifolio-layer {
+.portfolio-box:hover .portfolio-layer {
     transform: translateY(0); /* Exibe o texto ao passar o mouse */
 }
 
-.portifolio-layer h4 {
+.portfolio-layer h4 {
     font-size: 3rem;
     margin-bottom: 1rem; /* Adiciona espaço abaixo do título */
 }
 
-.portifolio-layer p {
+.portfolio-layer p {
     font-size: 1.6rem;
     margin-bottom: 2rem; /* Adiciona espaço abaixo da descrição */
 }
 
-.portifolio-layer a {
+.portfolio-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -330,7 +330,7 @@ section.home {
     border-radius: 50%;
 }
 
-.portifolio-layer a i {
+.portfolio-layer a i {
     font-size: 2rem;
     color: var(--second-bg-color);
 }
@@ -527,7 +527,7 @@ body[data-theme='dark'] {
     .services{
         padding-bottom: 7rem;
     }
-    .portifolio{
+    .portfolio{
         padding-bottom: 7rem;
     }
 
@@ -602,24 +602,24 @@ body[data-theme='dark'] {
         font-size: 4rem;
     }
 
-    .portifolio h2{
+    .portfolio h2{
         margin-bottom: 3rem;
     }
 
-    .portifolio-container{
+    .portfolio-container{
         flex-direction: column;        
     }
 
-    .portifolio img{
+    .portfolio img{
         width: 35vw;
     }
 }
 
 @media(max-width: 617px){
-    .portifolio-container{
+    .portfolio-container{
         flex-direction: column;
     }
-    .portifolio img{
+    .portfolio img{
         width: 35vw;
     }
 }
