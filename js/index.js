@@ -36,25 +36,23 @@ window.onscroll = () => {
 };
 
 
-// efeito digitação
 
-const phrases = [
-    "Analista de Sistemas",
-    "Desenvolvedor de Software",
-    "Analista de Dados Jr"
+
+// efeito digitação
+const phrases = [    
+    "Desenvolvedor Full Stack"
 ];
 
-
 const typingText = document.getElementById("typing-text");
-let phraseIndex = 0; // Certifique-se de que está escrito como "phraseIndex"
+let phraseIndex = 0; 
 let charIndex = 0;
 let isDeleting = false;
-const typingSpeed = 100; // Velocidade de digitação
-const deletingSpeed = 35; // Velocidade de apagar
-const pauseBetweenPhrases = 2000; // Pausa entre frases
+const typingSpeed = 50; 
+const deletingSpeed = 35; 
+const pauseBetweenPhrases = 2000; 
 
 function type() {
-    const currentPhrase = phrases[phraseIndex]; // Certifique-se de que está escrito como "phraseIndex"
+    const currentPhrase = phrases[phraseIndex]; 
 
     if (isDeleting) {
         // Apaga o texto
@@ -64,7 +62,7 @@ function type() {
         // Quando terminar de apagar, muda para a próxima frase
         if (charIndex === 0) {
             isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length; // Certifique-se de que está escrito como "phraseIndex"
+            phraseIndex = (phraseIndex + 1) % phrases.length; 
             setTimeout(type, typingSpeed);
         } else {
             setTimeout(type, deletingSpeed);
@@ -85,6 +83,8 @@ function type() {
 }
 
 document.addEventListener("DOMContentLoaded", () => type());
+//
+
 
 
 

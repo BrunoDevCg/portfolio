@@ -11,8 +11,6 @@
     font-family: 'Poppins',sans-serif;
 }
 
-
-
 #html{
     color: red;    
 }
@@ -218,7 +216,7 @@ section.home {
 }
 
 .services-container{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
