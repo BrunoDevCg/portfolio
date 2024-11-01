@@ -11,17 +11,6 @@
     font-family: 'Poppins',sans-serif;
 }
 
-#html{
-    color: red;    
-}
-#css{
-    color: blue;
-
-}
-#javascript{
-    color: yellow;
-}
-
 span{
     color: var(--main-color);    
 }
@@ -90,7 +79,7 @@ body{
   .sun {
     position: absolute;
     top: 50%;
-    left: 15px;
+    left: 3.2px;
     transform: translateY(-50%);
     font-size: 40px;
     color: yellow;
@@ -123,7 +112,7 @@ body{
   .stars {
     position: absolute;
     top: 50%;
-    right: 55px;
+    right: 50px;
     transform: translateY(-50%);
     font-size: 30px;
     color: white;
@@ -347,6 +336,11 @@ section.home {
 
 }
 
+.services-box h3{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
 .img-services img{
     width: 5vw;
     padding: 1rem;
@@ -386,29 +380,29 @@ section.home {
 }
 
 .portfolio-container .portfolio-box {
+    background-color: var(--bg-color);
+    border: .2rem solid var(--second-bg-color);
     position: relative;
     border-radius: 2rem;
     padding: 3rem 2rem 4rem;
-    box-shadow: 1rem var(--bg-color);
-    overflow: hidden;
     display: flex;
-    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    flex-direction: column; 
     justify-content: center;
-    align-items: center;        
+    align-items: center;   
+    transition: .5s ease;             
 }
 
 
 
-.portfolio-container .portfolio-box:hover {
+.portfolio-container .portfolio-box:hover {          
     border-color: var(--main-color);
-    background: var(--bg-color);
-    border: .2rem solid var(--second-bg-color);    
     transform: scale(1.02);
+    
+        
 }
 
 .portfolio-box img {
-    width: 10vw; /* Ajusta a imagem para preencher o contêiner */    
-    transition: .3s ease;
+    width: 13vw;     
 }
 
 .portfolio-box .btn{
@@ -424,9 +418,9 @@ section.home {
     transform: translateY(0); /* Exibe o texto ao passar o mouse */
 }
 
-.portfolio-layer h4 {
-    font-size: 3rem;
-    margin-bottom: 1rem; /* Adiciona espaço abaixo do título */
+
+.portfolio-layer h2{
+    font-size: 2rem;
 }
 
 .portfolio-layer p {
@@ -661,7 +655,7 @@ body[data-theme='dark'] {
         padding: 1rem 3%;
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.63);;
         display: none;        
     }
     .navbar {
