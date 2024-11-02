@@ -363,7 +363,7 @@ section.home {
 }
 
 .portfolio h2 {
-    margin-bottom: 5rem;    
+    margin-bottom: 1.5rem;    
     text-align: center; /* Centraliza o título */
 }
 
@@ -389,7 +389,13 @@ section.home {
     flex-direction: column; 
     justify-content: center;
     align-items: center;   
-    transition: .5s ease;             
+    transition: .5s ease;
+    
+    /* Limites de tamanho */
+    max-width: 450px; /* Ajuste o valor conforme necessário */
+    max-height: 550px; /* Ajuste o valor conforme necessário */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassar o tamanho máximo */
+    width: 100%; /* Garante que se adapte ao contêiner pai */
 }
 
 
@@ -413,6 +419,9 @@ section.home {
     display: flex;
 }
 
+#img-bruno{
+    width: 20vw;
+}
 
 .portfolio-box:hover .portfolio-layer {
     transform: translateY(0); /* Exibe o texto ao passar o mouse */
@@ -443,43 +452,14 @@ section.home {
     color: var(--second-bg-color);
 }
 
-
-.contact h2{
-    margin-bottom: 3rem;
-}
-.contact form{
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.contact form .input-box{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contact form .input-box input,
-.contact form textarea{
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
+.clima-tempo{
     color: var(--text-color);
-    background: var(--second-bg-color);
-    margin: .7rem 0;
+    border-radius: 2rem;
 }
-.contact form .input-box input{
-    width: 49%;
-}
-
-.contact form textarea{
-    resize: none;
-}
-
-.contact form .btn{
-    margin-top: 2rem;
-    cursor: pointer;
+.clima-tempo span{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    justify-content: center;
 }
 
 
@@ -519,6 +499,9 @@ section.home {
 .language-switcher {
     position: relative;
 }
+
+
+
 
 #language-toggle {
     background: var(--main-color);
@@ -605,6 +588,131 @@ body[data-theme='dark'] {
     white-space: nowrap;
     overflow: hidden;
 }
+/* 
+CSS CLIMA TEMPO
+
+*/
+/* Barra de busca responsiva */
+#search {
+    display: flex;
+    align-items: center;
+    gap: 3px; /* Reduzi o espaçamento */
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;    
+    width: 100%; 
+    max-width: 90%; 
+    box-sizing: border-box;
+}
+
+#search input {
+    border: none;    
+    font-size: 16px; /* Reduzi o tamanho da fonte */
+    width: 100%;
+}
+
+#search button {    
+    border: none;
+    cursor: pointer;
+}
+#search i{
+    font-size: 15px;
+}
+
+#weather {
+    display: none;
+    margin-top: 5px; /* Reduzi o espaçamento */
+    width: 60%;
+    max-width: 90%;
+}
+
+#weather.show {
+    display: block;
+}
+
+#weather #title {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px; /* Reduzi o tamanho da fonte */
+    color: var(--text-color);
+}
+
+#temp {
+    display: flex;
+    align-items: center;
+    background: var(--main-color);
+    color: var(--text-color);
+    border-radius: 15px; 
+    padding: 15px;     
+    max-width: 70rem;
+    max-height: 90%;
+    box-sizing: border-box;
+}
+
+#temp_value {
+    font-weight: bold;
+    font-size: 40px; 
+    line-height: 45px;
+}
+
+#temp_description {
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 14px; 
+}
+
+#other_infos {
+    margin-top: 20px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px; 
+    width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+#other_infos .info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 4px 8px; 
+    border-radius: 5px; 
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); 
+    background-color: var(--second-bg-color);
+    gap: 2px; 
+}
+
+#other_infos .info h2 {
+    font-size: 10px; /* Reduzi o tamanho da fonte */
+    font-weight: 600;
+}
+
+#other_infos .info i {
+    text-align: center;
+    font-size: 16px; 
+    width: 20%;
+}
+
+#temp_max_icon, #temp_min_icon, #humidity_icon, #wind_icon {
+    font-size: 17px; /* Unifiquei e reduzi o tamanho das fontes dos ícones */
+}
+
+#alert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+#alert img {
+    width: 50%; 
+    max-width: 100px; 
+    margin-top: 15px;
+}
+
+
 
 @keyframes blink-cursor {
     from {
