@@ -637,7 +637,7 @@ CSS CLIMA TEMPO
 
 #weather {
     display: none;        
-    max-width: 30rem;
+    max-width: 45rem;
     max-height: 45rem;
 }
 #temp {
@@ -648,14 +648,14 @@ CSS CLIMA TEMPO
     border-radius: 15px; 
     padding: 10px;     
     max-width: 35rem;
-    max-height: 16rem;
+    max-height: 12rem;
     box-sizing: border-box;
 }
 
 #temp_value {
     font-weight: bold;
-    font-size: 40px; 
-    line-height: 45px;
+    font-size: 30px; 
+    line-height: 35px;
 }
 
 #temp_description {
