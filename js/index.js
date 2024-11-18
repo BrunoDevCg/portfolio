@@ -72,8 +72,8 @@ toggleSwitch.addEventListener('click', function() {
 // efeito digitação
 const phrases = [    
     "Desenvolvedor de Software",
-    "Analista de Sistemas"    ,
-    "Tecnico Suporte de TI"
+    "Análista de Sistemas"    ,
+    "Técnico Suporte de TI"
 ];
 
 const typingText = document.getElementById("typing-text");
