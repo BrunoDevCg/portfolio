@@ -1,60 +1,79 @@
-Meu Portfólio
+# Meu Portfólio
 
-Este é meu portfólio pessoal onde apresento informações sobre mim, as tecnologias que conheço e projetos que desenvolvi. O site foi construído com HTML, CSS e JavaScript e está disponível para visualização em https://brunodevcg.github.io/portfolio/.
+Este é meu portfólio pessoal, onde apresento informações sobre minha trajetória profissional, tecnologias que domino e projetos que desenvolvi. O site foi construído com HTML, CSS e JavaScript e está disponível para visualização em:
 
+🔗 **[Acesse meu portfólio](https://brunodevcg.github.io/portfolio/)**
 
+---
 
-📜 Visão Geral
+## 📜 Visão Geral
 
-Este projeto tem o objetivo de apresentar uma interface simples e informativa sobre minha trajetória e conhecimentos em desenvolvimento desktop e web. Ele é dividido em quatro seções principais:
+Meu portfólio foi criado para apresentar uma interface clara e informativa sobre minha experiência e conhecimentos em desenvolvimento web e análise de dados. Ele é dividido em quatro seções principais:
 
-    Home
-    Sobre Mim
-    Tecnologias
-    Portfólio
+- **Home**: Introdução e boas-vindas.
+- **Sobre Mim**: Minha jornada profissional e interesses.
+- **Tecnologias**: Ferramentas e linguagens com as quais trabalho.
+- **Portfólio**: Projetos desenvolvidos e suas descrições.
 
-🔹 Home
+---
 
-A seção inicial apresenta uma introdução rápida e algumas informações de boas-vindas aos visitantes do meu portfólio. Ela dá uma ideia geral do conteúdo que eles podem esperar encontrar nas próximas seções.
+## 👨‍💻 Sobre Mim
 
+Sou formado em **Tecnologia em Análise e Desenvolvimento de Sistemas** pela Universidade Católica Dom Bosco e atualmente trabalho como **Analista de Dados**.
 
-🔹 Sobre Mim
+Tenho experiência com ferramentas de **Business Intelligence (BI)** como **Power BI** e **Power Automate**, além de automação de processos com **Python**. Também atuo como **Analista de Suporte Front-End** nos sistemas **TOTVS**, contribuindo para o desenvolvimento e manutenção de soluções.
 
-Nessa seção, conto um pouco sobre minha jornada e experiência em desenvolvimento web, além das minhas motivações e interesses profissionais. Aqui, os visitantes podem ter um breve panorama sobre minha história e o que me inspira no desenvolvimento de software.
+Minha trajetória inclui projetos utilizando **PHP, HTML, CSS, JavaScript, Node.js** e automações em **C# com .NET 4.8**, além de gerenciamento de bancos de dados **MySQL, SQL Server e MongoDB**.
 
+Sou apaixonado por tecnologia e estou sempre em busca de soluções inovadoras para otimização de processos e geração de resultados.
 
-🔹 Tecnologias
+---
 
-Essa seção lista as tecnologias que domino ou com as quais tenho familiaridade. Apresento as ferramentas que utilizo para desenvolver meus projetos, incluindo HTML, CSS, JavaScript e outras com as quais já trabalhei, como API para consumo de dados em alguns dos projetos.
+## 🚀 Tecnologias Utilizadas
 
+Aqui estão as principais tecnologias com as quais trabalho:
 
-🔹 Portfólio
+- **Front-End**: HTML5, CSS3, JavaScript.
+- **Back-End**: Node.js, PHP, C# (.NET 4.8).
+- **Banco de Dados**: MySQL, SQL Server, MongoDB.
+- **Business Intelligence**: Power BI, Power Automate.
+- **Automatização e Scripts**: Python.
 
-Aqui estão os projetos que desenvolvi, incluindo descrições e links para visualização. Todos os projetos listados foram feitos com HTML, CSS e JavaScript. Um dos projetos utiliza uma API para requisições de dados, ilustrando minha capacidade de integrar serviços externos aos meus desenvolvimentos.
+---
 
+## 📂 Portfólio
 
-🚀 Tecnologias Utilizadas
+Meu portfólio apresenta projetos que desenvolvi, com descrições detalhadas e links para visualização. Alguns dos projetos incluem:
 
-    HTML5: Estrutura semântica e organização do conteúdo do site.
-    CSS3: Estilização visual para uma apresentação atraente e responsiva.
-    JavaScript: Funcionalidades e interatividade das seções.
-    API: Consumo de dados em um dos projetos do portfólio.
+- Desenvolvimento de dashboards interativos com **Power BI**.
+- Automação de processos utilizando **Python e Power Automate**.
+- Sistemas web construídos com **Node.js, PHP e JavaScript**.
+- Integrações com APIs para consumo de dados.
 
-🌐 Hospedagem
+---
 
-O site está hospedado e pode ser acessado em: https://brunodevcg.github.io/portfolio/
+## 🌐 Hospedagem
 
+Meu portfólio está hospedado no GitHub Pages e pode ser acessado pelo link abaixo:
 
-📌 Funcionalidades Futuras
+🔗 **[brunodevcg.github.io/portfolio](https://brunodevcg.github.io/portfolio/)**
 
-Em versões futuras, planejo adicionar:
+---
 
-    Mais projetos com outras tecnologias, como frameworks modernos (React, Vue).
-    Animações para tornar a experiência do usuário mais dinâmica.
-    Melhorias de acessibilidade para tornar o site mais inclusivo.
+## 📌 Funcionalidades Futuras
 
-📫 Contato
+Planejo aprimorar meu portfólio com:
 
-Para entrar em contato, fique à vontade para me enviar uma mensagem por meio da seção de contato do site ou diretamente pelo GitHub.
+- Novos dashboards e relatórios interativos com **Power BI**.
+- Automação de processos empresariais com **Power Automate**.
+- Desenvolvimento de soluções de automação de dados utilizando **Python**.
+- Integração de ferramentas para otimização de análise de dados.
 
-Agradeço pela visita ao meu portfólio e por conhecer mais sobre o meu trabalho como desenvolvedor!
+---
+
+## 📫 Contato
+
+Se quiser entrar em contato, fique à vontade para me enviar uma mensagem por meio da seção de contato do site ou diretamente pelo GitHub.
+
+Agradeço pela visita e espero que goste do meu trabalho! 🚀
+
