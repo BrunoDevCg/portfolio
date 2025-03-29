@@ -193,12 +193,14 @@ section{
 
 }
 
-.home{
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding-top: 15rem; /* Ajuste conforme a altura do seu header */
+    padding-bottom: 2rem;
 }
+
 section.home {    
     justify-content: space-between; 
 }
