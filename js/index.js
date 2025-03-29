@@ -134,27 +134,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Alternância de tema claro/escuro
+// Alternância de tema (escuro/claro)
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('toggle-switch');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-
+    const themeToggleBtn = document.getElementById('toggleSwitch'); // botão de alternância de tema
+    const body = document.body;
+    
+    // Verificar se o tema está salvo no localStorage
+    const currentTheme = localStorage.getItem('theme') || 'dark'; // Se não houver tema no localStorage, definir 'dark' como padrão
+    
+    // Aplicar o tema inicial
     if (currentTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggleBtn.textContent = 'Modo Claro';
+        body.setAttribute('data-theme', 'dark');
+        themeToggleBtn.classList.remove('day');
+        themeToggleBtn.classList.add('night');
     } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        themeToggleBtn.textContent = 'Modo Escuro';
+        body.setAttribute('data-theme', 'light');
+        themeToggleBtn.classList.remove('night');
+        themeToggleBtn.classList.add('day');
     }
 
+    // Quando clicar no botão de alternância de tema
     themeToggleBtn.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme');
+        const theme = body.getAttribute('data-theme');
+        
         if (theme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            themeToggleBtn.textContent = 'Modo Escuro';
+            body.setAttribute('data-theme', 'light');
+            themeToggleBtn.classList.remove('night');
+            themeToggleBtn.classList.add('day');
             localStorage.setItem('theme', 'light');
         } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            themeToggleBtn.textContent = 'Modo Claro';
+            body.setAttribute('data-theme', 'dark');
+            themeToggleBtn.classList.remove('day');
+            themeToggleBtn.classList.add('night');
             localStorage.setItem('theme', 'dark');
         }
     });

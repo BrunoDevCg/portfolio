@@ -316,7 +316,7 @@ section.home {
     padding-bottom: 7rem;
 }
 
-.services-container .services-box{
+.services-container .services-box {
     flex: 1 45rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
@@ -324,6 +324,7 @@ section.home {
     text-align: center;
     border: .2rem solid var(--second-bg-color);
     transition: .5s ease;
+    padding-top: 5rem; /* Adiciona espaço no topo do card */
 }
 
 
@@ -338,10 +339,12 @@ section.home {
 
 }
 
-.services-box h3{
+.services-box h3 {
     font-size: 2rem;
     color: var(--main-color);
+    margin-top: 2rem; /* Adiciona margem superior ao título */
 }
+
 
 .img-services img{
     width: 5vw;
@@ -383,22 +386,41 @@ section.home {
 
 .portfolio-container .portfolio-box {
     background-color: var(--bg-color);
-    border: .2rem solid var(--second-bg-color);
+    border: .1rem solid var(--second-bg-color);
     position: relative;
     border-radius: 2rem;
     padding: 3rem 2rem 4rem;
     display: flex;
     flex-direction: column; 
-    justify-content: center;
+    justify-content: flex-start; /* Garante que o conteúdo fique alinhado no topo */
     align-items: center;   
     transition: .5s ease;
     
-    /* Limites de tamanho */
-    max-width: 450px; /* Ajuste o valor conforme necessário */
-    max-height: 550px; /* Ajuste o valor conforme necessário */
-    overflow: hidden; /* Oculta o conteúdo que ultrapassar o tamanho máximo */
-    width: 100%; /* Garante que se adapte ao contêiner pai */
+    /* Definindo a largura e altura consistentes */
+    width: 300px; /* Largura fixa */
+    height: 400px; /* Altura fixa */
+    max-width: 100%; /* Para garantir que não ultrapasse o limite do contêiner */
+    max-height: 550px; /* Limita a altura */
+    overflow: hidden; /* Para ocultar conteúdo que ultrapasse os limites */
 }
+
+.portfolio-container .portfolio-box img {
+    width: 100%; /* Ajusta a largura da imagem para preencher a caixa */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem cubra completamente o espaço disponível */
+    max-height: 200px; /* Limita a altura máxima da imagem */
+}
+
+.portfolio-layer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Garante que o texto comece no topo */
+    align-items: center;
+    max-height: calc(100% - 220px); /* Ajusta o tamanho do texto para não ultrapassar o card */
+    overflow: hidden;
+}
+
+
 
 
 
@@ -409,9 +431,13 @@ section.home {
         
 }
 
-.portfolio-box img {
-    width: 13vw;     
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibilidade */
+    align-items: center;
+    gap: 2.5rem;
 }
+
 
 .portfolio-box .btn{
     margin: 2rem;
@@ -722,6 +748,44 @@ CSS CLIMA TEMPO
     max-width: 100px; 
     margin-top: 15px;
 }
+
+
+#pdf-merge {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pdf-merge input[type="file"] {
+    margin: 10px;
+}
+
+#pdf-merge button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#pdf-merge button:hover {
+    background-color: #45a049;
+}
+
+#downloadLink {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+#downloadLink:hover {
+    text-decoration: underline;
+}
+
 
 
 

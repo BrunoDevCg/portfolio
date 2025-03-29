@@ -306,6 +306,27 @@
                </div>
             </div>
             
+
+            <!-- Novo projeto para Mesclar PDFs -->
+            <div class="portfolio-box">                
+                <div class="portfolio-layer">
+                    <h2><span>Mesclar PDFs</span></h2>
+                    <p>Selecione dois arquivos PDF para mesclar.</p>
+                </div>
+
+                <!-- Formulário para selecionar os PDFs -->
+                <div id="pdf-merge">
+                    <input type="file" id="pdf1" accept="application/pdf">
+                    <input type="file" id="pdf2" accept="application/pdf">
+                    <button id="mergeBtn">Mesclar PDFs</button>
+                </div>
+
+                <!-- Link para download do PDF combinado -->
+                <h3>Baixe o PDF combinado:</h3>
+                <a id="downloadLink" href="#" style="display:none;" download="merged.pdf">Baixar PDF combinado</a>
+            </div>
+
+
         </div>
     </section>
 
@@ -322,8 +343,9 @@
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
     <script src="js/index.js" defer></script>
+    <script src="js/pdf.js" defer></script>
     <script src="js/climaTempo.js" defer></script>
 </body>
 </html>
