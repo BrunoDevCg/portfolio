@@ -760,17 +760,20 @@ CSS CLIMA TEMPO
 }
 
 #pdf-merge button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: 1.5s ease;
 }
 
 #pdf-merge button:hover {
-    background-color: #45a049;
+    background: var(--main-color);
 }
 
 #downloadLink {
@@ -779,7 +782,7 @@ CSS CLIMA TEMPO
     text-align: center;
     font-size: 18px;
     text-decoration: none;
-    color: #4CAF50;
+    color: var(--main-color);
 }
 
 #downloadLink:hover {
