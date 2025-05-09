@@ -45,7 +45,6 @@ Aqui estão as principais tecnologias com as quais trabalho:
 
 Meu portfólio apresenta projetos que desenvolvi, com descrições detalhadas e links para visualização. Alguns dos projetos incluem:
 
-- Desenvolvimento de dashboards interativos com **Power BI**.
 - Automação de processos utilizando **Python e Power Automate**.
 - Sistemas web construídos com **Node.js, PHP e JavaScript**.
 - Integrações com APIs para consumo de dados.
@@ -57,17 +56,6 @@ Meu portfólio apresenta projetos que desenvolvi, com descrições detalhadas e 
 Meu portfólio está hospedado no GitHub Pages e pode ser acessado pelo link abaixo:
 
 🔗 **[brunodevcg.github.io/portfolio](https://brunodevcg.github.io/portfolio/)**
-
----
-
-## 📌 Funcionalidades Futuras
-
-Planejo aprimorar meu portfólio com:
-
-- Novos dashboards e relatórios interativos com **Power BI**.
-- Automação de processos empresariais com **Power Automate**.
-- Desenvolvimento de soluções de automação de dados utilizando **Python**.
-- Integração de ferramentas para otimização de análise de dados.
 
 ---
 
